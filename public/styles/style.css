@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    --color:#222;
+    --bg-color:#fff;
+    --anchor-color:rgb(62, 62, 136);
+}
+
+body.dark-theme{
+    --color:#fff;
+    --bg-color:#222;
+    --anchor-color:rgb(59, 59, 228);
+}
+
+body{
+    text-align: center;
+    margin-top: 30px;
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+
+body a{
+    color: var(--anchor-color);
+}
