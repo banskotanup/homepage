@@ -1,27 +1,381 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Playfair Display", "Roboto";
+    box-sizing: border-box;
 }
 
 body{
     --color:#222;
     --bg-color:#fff;
     --anchor-color:rgb(62, 62, 136);
+    --head-text-color: #fdfdfd;
+    --text-color:#575655;
 }
 
 body.dark-theme{
     --color:#fff;
     --bg-color:#222;
     --anchor-color:rgb(59, 59, 228);
+    --head-text-color: #eee;
+    --text-color:#eedfdf;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0891b2;
+    border-radius: 10%;
 }
 
 body{
-    text-align: center;
-    margin-top: 30px;
     color: var(--color);
     background-color: var(--bg-color);
+    transition: all .2s ease-in !important;
 }
 
 body a{
     color: var(--anchor-color);
+}
+
+header{
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+}
+
+.diagonal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: #0891b2;
+    transform-origin: 0;
+    z-index: -1;
+    transform: skewY(-10deg);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+}
+
+.header-section{
+    transform: translateY(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.anup>img{
+    height: 500px;
+    width: auto;
+    box-shadow:0 0 15px 0 rgba(0,0,0,0.8);
+    transform: translateY(30px);
+}
+
+#name{
+    font-size: 3em;
+    transform: translateY(-30px);
+    box-shadow:0 0 15px 0 rgba(0,0,0,0.8);
+    background-image: linear-gradient(rgba(0,0,0,0.2) 98%, #222 2%);
+}
+
+.about-me{
+    background-color: var(--bg-color);
+    width: 50%;
+    height: 70%;
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.7);
+    
+}
+
+.about-me h1{
+    margin: 15px;
+    font-size: 2em;
+    font-weight: 520;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.about-me p{
+    margin: 15px;
+    font-size: 1.1em;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.social-icons{
+    text-align: end;
+    margin-bottom: 5px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: var(--color);
+}
+
+.social-icons a i{
+    font-size: 24px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.social-icons>a:hover{
+    transform: scale(1.1);
+    color: #575655;
+}
+
+.main-header{
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.main-header h1{
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+    transform: translateY(-25px);   
+}
+
+.card{
+    height: 500px;
+    width: 450px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+    cursor: pointer; 
+    border-left: 4px solid orange;
+    border-radius: 10px;
+}
+
+.card:hover{
+    background-color: rgba(99, 100, 100, 0.2);
+    box-shadow: 0 0 15px rgba(31, 30, 30, 0.5);
+    transform: scale(1.03);
+}
+
+.card-image{
+    height: 350px;
+    width: 400px;
+    transform: translateY(-15px);
+    margin-top: 10%;
+}
+
+.card-image>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-left: 5%;  
+}
+
+.card-desc{
+    transform: translateY(-5px);
+    margin: 5%;
+}
+
+.card-desc h3{
+    transform: translateY(-10px);
+    color: var(--color);
+}
+
+.card-desc p{
+    color: var(--text-color);
+}
+
+.card-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-icon{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-icon a i{
+    font-size: 19px;
+}
+
+.card-icon a{
+    text-decoration: none;
+    color: var(--color);
+}
+
+.card-icon a:hover{
+    transform: scale(1.05);
+    color: #575655;
+}
+
+.svg a svg{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+}
+
+.svg a{
+    text-decoration: none;
+    color: var(--color);
+}
+
+.svg a svg:hover{
+    transform: scale(1.05);
+    color: #575655;
+}
+
+.card-name h3:hover{
+    color: #575655;
+}
+
+footer{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0891b2;
+    z-index: -1;
+
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.footer-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-desc{
+    padding: 40px;
+    margin: 20px;
+
+}
+
+.footer-desc h3{
+    font-size: 2em;
+    font-weight: 500;
+    transform: translateY(-100px);
+    color: #222;
+}
+
+.footer-desc>p.msg{
+    color: #222;
+    font-size: 1.203em;
+    transform: translateY(-70px);
+}
+.footer-desc>p.addr{
+    color: #222;
+    font-size: 1.203em;
+    transform: translateY(-50px);
+}
+.footer-desc>p.contact{
+    color: #222;
+    font-size: 1.203em;
+    transform: translateY(-30px);
+}
+
+.footer-img{
+    transform: translate(100px, -100px);
+}
+
+.footer-img img{
+    height: 500px;
+    width: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.copy-right{
+    background: #0891b2;
+    transform: translateY(20px);
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-right p{
+    color: #222;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.social-footer-icons{
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+.social-footer-icons a{
+    text-decoration: none;
+    color: #222;
+}
+
+.social-footer-icons a i{
+    font-size: 24px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.social-footer-icons>a:hover{
+    transform: scale(1.1);
+    color: #575655;
+}
+
+.addr svg{
+    height:20px;
+    width: 20px;
+}
+.contact svg{
+    height: 20px;
+    width: 20px;
+}
+
+#btn-theme-toggle svg{
+    height: 30px;
+    width: 30px;
+}
+
+.btns-toggle{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+}
+
+.btns-toggle button{
+    background-color: #0891b2;
+    border: 1px solid #0891b2;
 }
