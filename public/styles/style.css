@@ -40,6 +40,17 @@ body a{
     color: var(--anchor-color);
 }
 
+
+html, body{
+    overflow-x: hidden;
+}
+
+@media(max-width: 669px){
+    .wrapper{
+        
+    }
+}
+
 header{
 display: flex;
 position: relative;
@@ -58,6 +69,14 @@ align-items: center;
     z-index: -1;
     transform: skewY(-10deg);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+}
+
+@media (max-width: 699px){
+    .diagonal{
+        height: 50%;
+        transform: skewY(-30deg);
+    }
 }
 
 .header-section{
@@ -65,6 +84,12 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 699px){
+    .header-section{
+        flex-direction: column;
+    }
 }
 
 .anup{
@@ -81,11 +106,28 @@ align-items: center;
     transform: translateY(30px);
 }
 
+@media (max-width: 669px){
+    .anup>img{
+        height: 400px;
+        width: 400px;
+        transform: translateX(20px);
+    }
+}
+
 #name{
     font-size: 3em;
     transform: translateY(-30px);
     box-shadow:0 0 15px 0 rgba(0,0,0,0.8);
     background-image: linear-gradient(rgba(0,0,0,0.2) 98%, #222 2%);
+}
+
+@media (max-width: 669px){
+    #name{
+        text-align: center;
+        transform: translateX(40px);
+        transform: translateY(-60px);
+        margin-top: 70px;
+    }
 }
 
 .about-me{
@@ -94,6 +136,14 @@ align-items: center;
     height: 70%;
     box-shadow: 3px 3px 7px rgba(0,0,0,0.7);
     
+}
+
+@media (max-width: 669px){
+    .about-me{
+        width: 100%;
+        transform: translateY(-35px);
+        margin-left: 40px;
+    }
 }
 
 .about-me h1{
@@ -139,6 +189,20 @@ align-items: center;
 
 }
 
+@media (max-width:669px){
+    .main-header{
+        transform: translateX(-50px);
+        margin-right: 100px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .main-header h1{
+        margin-top: 10px;
+        transform: translateY(-40px);
+    }
+}
+
 .main-header h1{
     margin-top: 30px;
     margin-left: 20px;
@@ -157,6 +221,17 @@ align-items: center;
     transform: translateY(-25px);   
 }
 
+@media(max-width: 669px){
+    .cards{
+        height: auto;
+        width: 100%;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        align-items: flex-start;
+        transform: translateY(-50px);
+    }
+}
+
 .card{
     height: 500px;
     width: 450px;
@@ -172,10 +247,24 @@ align-items: center;
     border-radius: 10px;
 }
 
+@media (max-width:669px){
+    .card{
+        height: auto;
+        width: 95%;
+        transform: translateX(-10px);
+    }
+}
+
 .card:hover{
     background-color: rgba(99, 100, 100, 0.2);
     box-shadow: 0 0 15px rgba(31, 30, 30, 0.5);
     transform: scale(1.03);
+}
+
+@media (max-width:669px){
+    .card:hover{
+        transform: scale(1.001);
+    }
 }
 
 .card-image{
@@ -231,6 +320,21 @@ align-items: center;
     color: #575655;
 }
 
+@media (max-width: 669px){
+
+    .card-image{
+        height: 350px;
+        width: 95%;
+    }
+
+    .card-image>img{
+        height: 100%;
+        width: 95%;
+        object-fit: cover;
+        margin-left: 5%;  
+    }
+}
+
 .svg a svg{
     height: 20px;
     width: 20px;
@@ -258,6 +362,13 @@ footer{
     margin-top: 7%;
 }
 
+@media (max-width: 669px){
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .bg{
     position: absolute;
     top: 0;
@@ -266,7 +377,6 @@ footer{
     height: 100%;
     background: #0891b2;
     z-index: -1;
-
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
     overflow: hidden;
 }
@@ -275,6 +385,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width: 669px){
+    .footer-section{
+        flex-direction: column;
+    }
 }
 
 .footer-desc{
@@ -316,9 +432,20 @@ footer{
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
+@media (max-width: 669px){
+    .footer-img{
+        transform: translate(20px);
+        margin-bottom: 20px;
+    }
+
+    .footer-img img{
+        height: auto;
+        width: 90%;
+    }
+}
+
 .copy-right{
     background: #0891b2;
-    transform: translateY(20px);
     height: 70px;
     width: 100%;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
